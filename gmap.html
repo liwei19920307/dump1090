@@ -111,8 +111,8 @@
         if (p.flight.length) {
             html += '<b>'+p.flight+'</b><br>';
         }
-        html += '高度: '+p.altitude+' feet<br>';
-        html += '速度: '+p.speed+' knots<br>';
+        html += '高度: '+p.altitude*0.3048+' m<br>';
+        html += '速度: '+p.speed*1.852+' km/h<br>';
         html += '坐标: '+p.lat+', '+p.lon+'<br>';
         i.innerHTML = html;
     }
