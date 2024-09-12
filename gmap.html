@@ -99,7 +99,7 @@
     function refreshGeneralInfo() {
         var i = document.getElementById('geninfo');
 
-        i.innerHTML = NumPlanes+' planes on screen.';
+        i.innerHTML = NumPlanes+' 架 ✈️';
     }
 
     function refreshSelectedInfo() {
@@ -107,13 +107,13 @@
         var p = Planes[Selected];
 
         if (!p) return;
-        var html = 'ICAO: '+p.hex+'<br>';
+        var html = '✈️: '+p.hex+'<br>';
         if (p.flight.length) {
             html += '<b>'+p.flight+'</b><br>';
         }
-        html += 'Altitude: '+p.altitude+' feet<br>';
-        html += 'Speed: '+p.speed+' knots<br>';
-        html += 'Coordinates: '+p.lat+', '+p.lon+'<br>';
+        html += '高度: '+p.altitude+' feet<br>';
+        html += '速度: '+p.speed+' knots<br>';
+        html += '坐标: '+p.lat+', '+p.lon+'<br>';
         i.innerHTML = html;
     }
 
@@ -190,9 +190,9 @@
     <div id="map_canvas" style="width:80%; height:100%"></div>
     <div id="info">
       <div>
-        <h1>Dump1090</h1>
+        <h1>dump1090</h1>
         <p id="geninfo"></p>
-        <p id="selinfo">Click on a plane for info.</p>
+        <p id="selinfo">点击查看详情</p>
       </div>
     </div>
   </body>
